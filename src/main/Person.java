@@ -28,5 +28,23 @@ public class Person {
         this.gender = gender;
     }
 
+    public Person(String name, int age, char gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder l = new StringBuilder();
+        l.append("Hello my name is " + getName() + ". ");
+        if (getGender() == 'M') {
+            l.append("i am a man ");
+        } else {
+            l.append("i am a woman ");
+        }
+        l.append("and i am " + getAge() + " years old.");
+        return l.toString();
+    }
 
 }
